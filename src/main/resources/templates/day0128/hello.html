@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<th:block th:replace="~{fragments/cdn :: cdn}"></th:block>
+<style type="text/css">
+#wrap{  margin: 0px auto; width: 1000px; height: 1200px; }	
+#header{ height: 150px;	 }	
+#container{ height: 950px;	 }	
+#footer{ height: 100px;}	
+</style>
+
+<script type="text/javascript">
+$(function(){
+$("#btn").click(function(){
+	$("#frm").submit();
+});
+});
+</script>
+</head>
+<body>
+<div id="wrap">
+<div id="header">헤더
+</div>
+<div id="container">
+<strong>AOP</strong>
+<a th:text="@{/msg}">내일의 메세지</a>
+<a th:href="@{/pointcut}">String이 반환형이면서 매개변수가 없는 test method</a><br>
+<a th:href="@{/pointcut2}">String이 반환형이면서 매개변수가 있는 test method</a><br>
+<a th:href="@{/pointcut3}">day0128패키지의 모든클래스중 String이 반환형이면서 매개변수가 String test method</a><br>
+<a th:href="@{/pointcut4}">day0128패키지의 모든클래스중 String이 반환형이면서 매개변수가 String search로 시작되는 모든 method</a><br>
+<a th:href="@{/pointcut5}">day0128패키지의 모든method</a><br>
+<a th:href="@{/pointcut6}">String이 반환형이면서 매개변수가 없는 test method</a><br>
+
+</div>
+<div id="footer">푸터
+<th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+</div>
+</body>
+</html>
