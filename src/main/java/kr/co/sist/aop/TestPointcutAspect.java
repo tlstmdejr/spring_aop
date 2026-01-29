@@ -1,4 +1,4 @@
-package kr.co.sist.day0128;
+package kr.co.sist.aop;
 
 import org.aopalliance.intercept.Joinpoint;
 import org.aspectj.lang.JoinPoint;
